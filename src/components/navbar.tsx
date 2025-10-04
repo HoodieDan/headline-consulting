@@ -1,7 +1,7 @@
 import Logo from "@/assets/images/pngs/logo.png";
 import { navLinks } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Button } from "./ui/button";
 
@@ -9,12 +9,36 @@ type INavbar = React.ComponentProps<"nav">;
 
 const Navbar = ({ className }: INavbar) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <nav
             className={cn(
-                "container w-[calc(100%-var(--spacing)*8)] bg-(--nav-bg)/95 md:px-10 rounded-[1.25rem] flex flex-col backdrop-blur-md fixed inset-x-0 z-20",
+                "container w-[calc(100%-var(--spacing)*8)] bg-(--nav-bg)/95 md:px-10 rounded-[1.25rem] flex flex-col backdrop-blur-md fixed inset-x-0 z-20 transition duration-300",
                 className,
+                {
+                    "opacity-100": isVisible,
+                    "opacity-0 pointer-events-none": !isVisible,
+                },
             )}
         >
             <div className="h-nav flex items-center justify-between">
