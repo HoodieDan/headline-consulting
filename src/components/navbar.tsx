@@ -13,7 +13,7 @@ const Navbar = ({ className }: INavbar) => {
     return (
         <nav
             className={cn(
-                "container w-[calc(100%-var(--spacing)*8)] bg-(--nav-bg)/90 md:px-10 rounded-[1.25rem] flex flex-col backdrop-blur-md fixed inset-x-0 z-20",
+                "container w-[calc(100%-var(--spacing)*8)] bg-(--nav-bg)/95 md:px-10 rounded-[1.25rem] flex flex-col backdrop-blur-md fixed inset-x-0 z-20",
                 className,
             )}
         >
