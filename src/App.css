@@ -150,5 +150,5 @@
 }
 
 @utility text-heading {
-  @apply font-general-sans font-medium text-primary md:leading-15 tracking-[-0.6%];
+  @apply font-general-sans font-medium text-primary leading-15 tracking-[-0.6%];
 }

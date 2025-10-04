@@ -12,8 +12,8 @@ const Footer = () => {
                         <img src={LogoBg} alt="Headline Consulting logo" />
                     </Link>
 
-                    <div className="flex items-center justify-between">
-                        <ul className="flex items-center gap-8">
+                    <div className="flex md:flex-row flex-col md:items-center justify-between md:gap-8 gap-16">
+                        <ul className="flex md:flex-row flex-col md:items-center md:gap-8 gap-4">
                             {navLinks.slice(1).map(({ href, name }, index) => (
                                 <li key={index} className="text-sm font-medium">
                                     <Link to={href} title={name}>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="h-10 flex items-end justify-end border-t border-secondary">
+                <div className="h-10 flex md:items-end md:justify-end border-t border-secondary">
                     <div className="flex items-center gap-3 text-xs">
                         <span>© 2025 Headline Consulting</span>
                         <Dot className="size-3" />

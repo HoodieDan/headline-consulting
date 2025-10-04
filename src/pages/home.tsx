@@ -31,14 +31,15 @@ export default function Home() {
     return (
         <main>
             {/* ---------------------  Hero  --------------------- */}
-            <header className="h-dvh pt-10 bg-[linear-gradient(0deg,#02304780,#02304780),url(@/assets/images/jpegs/hero-bg.jpg)] bg-no-repeat bg-cover flex flex-col">
+            <header className="h-dvh md:pt-10 pt-5 bg-[linear-gradient(0deg,#02304780,#02304780),url(@/assets/images/jpegs/hero-bg.jpg)] bg-no-repeat bg-cover bg-center flex flex-col">
                 <Navbar />
 
-                <div className="h-full flex flex-col justify-center gap-8">
+                <div className="h-full flex flex-col justify-center gap-8 md:px-0 px-4">
                     <div className="space-y-4 text-white text-center">
                         <h1 className="text-heading text-white text-[3.5rem]">
                             Helping You Navigate Today,
-                            <br /> While Building Tomorrow.
+                            <br className="md:inline hidden" /> While Building
+                            Tomorrow.
                         </h1>
                         <p>
                             From market analysis to operational excellence, we
@@ -63,8 +64,8 @@ export default function Home() {
 
             {/* ---------------------  Why Choose Headline Consulting?  --------------------- */}
             <section className="bg-[url(@/assets/images/pngs/diamond-vector.png),url(@/assets/images/pngs/diamond-vector.png)] bg-no-repeat bg-position-[top,bottom] py-25">
-                <div className="space-y-4 text-center">
-                    <h2 className="text-heading text-[3.125rem]">
+                <div className="space-y-4 text-center md:px-0 px-4">
+                    <h2 className="text-heading md:text-[3.125rem] text-4xl">
                         Why Choose Headline Consulting?
                     </h2>
                     <p>
@@ -75,9 +76,9 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="container flex flex-col gap-2 mt-20">
-                    <div className="flex flex-col md:flex-row gap-2">
-                        <div className="md:flex-2 p-8 rounded-xxl bg-ice-white flex flex-col gap-8">
+                <div className="container flex flex-col md:gap-2 gap-4 mt-20">
+                    <div className="flex flex-col md:flex-row md:gap-2 gap-4">
+                        <div className="md:flex-2 md:p-8 p-5 rounded-xxl bg-ice-white flex flex-col gap-8">
                             <div className="space-y-3">
                                 <h4 className="text-2xl text-primary font-medium font-general-sans">
                                     Trusted Expertise
@@ -99,7 +100,7 @@ export default function Home() {
                             </figure>
                         </div>
 
-                        <div className="md:flex-1 p-8 rounded-xxl bg-ice-white flex flex-col gap-8">
+                        <div className="md:flex-1 md:p-8 p-5 rounded-xxl bg-ice-white flex flex-col gap-8">
                             <figure className="size-full">
                                 <img
                                     src={FastServicesImg}
@@ -123,7 +124,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="p-8 rounded-xxl bg-ice-white flex flex-col gap-8">
+                    <div className="md:p-8 p-5 rounded-xxl bg-ice-white flex flex-col gap-8">
                         <figure className="md:h-110">
                             <img
                                 src={SupportImg}
@@ -148,8 +149,8 @@ export default function Home() {
             </section>
 
             {/* ---------------------  Meet Our Clients  --------------------- */}
-            <section className="p-16 bg-primary flex items-center justify-between">
-                <div className="space-y-3">
+            <section className="md:px-16 px-4 py-16 bg-primary flex md:flex-row flex-col items-center justify-between md:gap-16 gap-8">
+                <div className="space-y-3 shrink-0">
                     <h3 className="text-heading text-[2.5rem] text-frost-white">
                         Meet Our Clients
                     </h3>
@@ -161,7 +162,7 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="flex items-center gap-16">
+                <div className="flex flex-wrap items-center md:justify-between justify-center gap-x-16 gap-y-8">
                     {ourClients.map(({ name, img }, index) => (
                         <img
                             key={name + index}
@@ -188,14 +189,14 @@ export default function Home() {
                         ({ icon, description, heading }, index) => (
                             <div
                                 key={heading + index}
-                                className="flex flex-col gap-4 p-8 rounded-xxl bg-ice-white"
+                                className="flex flex-col gap-4 md:p-8 p-5 rounded-xxl bg-ice-white"
                             >
                                 <img
                                     src={icon}
                                     alt={`${heading} icon`}
                                     className="size-8"
                                 />
-                                <h4 className="text-2xl font-medium text-primary leading-[140%] whitespace-pre-line">
+                                <h4 className="text-2xl font-medium text-primary leading-[140%] md:whitespace-pre-line">
                                     {heading}
                                 </h4>
                                 <p className="text-sm leading-[150%]">
@@ -209,7 +210,7 @@ export default function Home() {
 
             {/* ---------------------  Subscribe to our newsletter  --------------------- */}
             <section className="py-22.5">
-                <div className="container p-20 bg-ice-white md:bg-[url(@/assets/images/pngs/bars.png)] bg-no-repeat bg-position-[calc(100%-80px)_100%] flex flex-col gap-8 rounded-xxl">
+                <div className="container md:p-20 p-8 bg-ice-white md:bg-[url(@/assets/images/pngs/bars.png)] bg-no-repeat bg-position-[calc(100%-80px)_100%] flex flex-col gap-8 rounded-xxl">
                     <div className="space-y-2">
                         <h3 className="text-heading text-[2.5rem]">
                             Subscribe to our newsletter
@@ -249,7 +250,7 @@ export default function Home() {
 
             {/* ---------------------  Your Questions. Answered.  --------------------- */}
             <section className="container pt-25 pb-30 flex flex-col items-center gap-20">
-                <div className="w-3/5 flex flex-col gap-10">
+                <div className="md:w-3/5 flex flex-col gap-10">
                     <div className="space-y-1 text-center">
                         <h2 className="text-heading text-[2.5rem]">
                             Your Questions. Answered.
