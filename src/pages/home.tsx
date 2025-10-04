@@ -1,6 +1,7 @@
 import FastServicesImg from "@/assets/images/jpegs/fast-sevices.jpg";
 import SupportImg from "@/assets/images/jpegs/support.jpg";
 import TrustedExpertiseImg from "@/assets/images/jpegs/trusted-expertise.jpg";
+import CustomerReviewCorousel from "@/components/customer-review-corousel";
 import Navbar from "@/components/navbar";
 import { buttonVariants } from "@/components/ui/button";
 import { ourClients, ourServices } from "@/lib/data/home";
@@ -202,6 +203,21 @@ export default function Home() {
                         Learn more
                     </Link>
                 </div>
+            </section>
+
+            {/* ---------------------  Our Customer Reviews  --------------------- */}
+            <section className="container py-25">
+                <div className="space-y-2">
+                    <h2 className="text-heading text-[2.5rem]">
+                        Our Customer Reviews
+                    </h2>
+                    <p>
+                        See what clients are saying about their experience with
+                        Headline Consulting.
+                    </p>
+                </div>
+
+                <CustomerReviewCorousel className="mt-15" />
             </section>
         </main>
     );

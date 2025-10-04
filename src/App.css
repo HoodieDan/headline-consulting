@@ -37,6 +37,7 @@
   --color-card: var(--card);
   --color-ice-white: var(--ice-white);
   --color-frost-white: var(--frost-white);
+  --color-steel-gray: var(--steel-gray);
 
   --font-general-sans: 'General Sans', sans-serif;
   --font-inter: "Inter", sans-serif;
@@ -83,6 +84,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --ice-white: #F8FDFF;
   --frost-white: #FAFDFF;
+  --steel-gray: #5E5E5E;
 }
 
 .dark {

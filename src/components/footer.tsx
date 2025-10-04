@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="h-10 flex items-end justify-end border-t border-ice-white">
+                <div className="h-10 flex items-end justify-end border-t border-secondary">
                     <div className="flex items-center gap-3 text-xs">
                         <span>© 2025 Headline Consulting</span>
                         <Dot className="size-3" />

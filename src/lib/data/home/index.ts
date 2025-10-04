@@ -1,7 +1,15 @@
+import AlexAvatar from "@/assets/images/pngs/alex.png";
+import AstraPrimaryImg from "@/assets/images/pngs/astra-primary.png";
 import AstraImg from "@/assets/images/pngs/astra.png";
 import AtlasImg from "@/assets/images/pngs/atlas.png";
 import AudlabsImg from "@/assets/images/pngs/audlabs.png";
+import BaseImg from "@/assets/images/pngs/base.png";
+import DanielAvatar from "@/assets/images/pngs/daniel.png";
+import GraphiteImg from "@/assets/images/pngs/graphite.png";
 import ImagineAiImg from "@/assets/images/pngs/imagine-ai.png";
+import JordanAvatar from "@/assets/images/pngs/jordan.png";
+import LayerImg from "@/assets/images/pngs/layer.png";
+import SamanthaAvatar from "@/assets/images/pngs/samantha.png";
 import ShapeImg from "@/assets/images/pngs/shape.png";
 import DiceFour from "@/assets/images/svgs/DiceFour.svg";
 import DoorOpen from "@/assets/images/svgs/DoorOpen.svg";
@@ -73,4 +81,63 @@ export const socialLinks = [
     { name: "Facebook", href: "", icon: Facebook },
     { name: "Instagram", href: "", icon: Instagram },
     { name: "LinkedIn", href: "", icon: LinkedIn },
+];
+
+export const customerReviews = [
+    {
+        companyLogo: BaseImg,
+        review: `“Headline Consults saved us weeks of design work. The components are beautifully crafted and easy to plug in.”`,
+        avatar: AlexAvatar,
+        name: "Alex Carter",
+        role: "Director, Base",
+    },
+    {
+        companyLogo: GraphiteImg,
+        review: `“I've tried dozens of firms, this is by far the cleanest and most versatile one yet.”`,
+        avatar: DanielAvatar,
+        name: "Daniel White",
+        role: "HR Manager, Nova",
+    },
+    {
+        companyLogo: AstraPrimaryImg,
+        review: `“The design quality is top-tier. It gave our MVP a polished feel right from day one.”`,
+        avatar: SamanthaAvatar,
+        name: "Samantha Lee",
+        role: "Business Developer, Pixel",
+    },
+    {
+        companyLogo: LayerImg,
+        review: `“It's rare to find a firm that works perfectly out of the box. Headline Consulting just gets it right.”`,
+        avatar: JordanAvatar,
+        name: "Jordan Kim",
+        role: "Frontend Engineer, Atlas",
+    },
+    {
+        companyLogo: BaseImg,
+        review: `“Headline Consults saved us weeks of design work. The components are beautifully crafted and easy to plug in.”`,
+        avatar: AlexAvatar,
+        name: "Alex Carter",
+        role: "Director, Base",
+    },
+    {
+        companyLogo: GraphiteImg,
+        review: `“I've tried dozens of firms, this is by far the cleanest and most versatile one yet.”`,
+        avatar: DanielAvatar,
+        name: "Daniel White",
+        role: "HR Manager, Nova",
+    },
+    {
+        companyLogo: AstraPrimaryImg,
+        review: `“The design quality is top-tier. It gave our MVP a polished feel right from day one.”`,
+        avatar: SamanthaAvatar,
+        name: "Samantha Lee",
+        role: "Business Developer, Pixel",
+    },
+    {
+        companyLogo: LayerImg,
+        review: `“It's rare to find a firm that works perfectly out of the box. Headline Consulting just gets it right.”`,
+        avatar: JordanAvatar,
+        name: "Jordan Kim",
+        role: "Frontend Engineer, Atlas",
+    },
 ];
