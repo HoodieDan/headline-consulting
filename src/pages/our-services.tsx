@@ -159,7 +159,7 @@ const OurServices = () => {
 
                     <Link
                         to="/contact-us"
-                        title="Contact us"
+                        title="Book a Consultation"
                         className={cn(buttonVariants(), "w-fit mx-auto")}
                     >
                         Book a Consultation
