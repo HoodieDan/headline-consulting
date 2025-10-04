@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.headline-consulting.com/sitemap.xml
+Host: https://www.headline-consulting.com

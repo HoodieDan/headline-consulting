@@ -141,3 +141,26 @@ export const customerReviews = [
         role: "Frontend Engineer, Atlas",
     },
 ];
+
+export const faqs = [
+    {
+        question: "What we do at Headline Consulting?",
+        answer: `Headline Consulting is a strategy-driven firm dedicated to helping organizations achieve measurable success. We partner with startups, SMEs, and established companies to solve complex problems, optimize performance, and design practical solutions that drive sustainable growth.\n\nAt Headline Consulting, we help businesses unlock growth, streamline operations, and make confident decisions in a changing world.`,
+    },
+    {
+        question: "Can I upgrade my plan at any time?",
+        answer: `Headline Consulting is a strategy-driven firm dedicated to helping organizations achieve measurable success. We partner with startups, SMEs, and established companies to solve complex problems, optimize performance, and design practical solutions that drive sustainable growth.\n\nAt Headline Consulting, we help businesses unlock growth, streamline operations, and make confident decisions in a changing world.`,
+    },
+    {
+        question: "Is there a discount for annual subscriptions?",
+        answer: `Headline Consulting is a strategy-driven firm dedicated to helping organizations achieve measurable success. We partner with startups, SMEs, and established companies to solve complex problems, optimize performance, and design practical solutions that drive sustainable growth.\n\nAt Headline Consulting, we help businesses unlock growth, streamline operations, and make confident decisions in a changing world.`,
+    },
+    {
+        question: "What is included in the free trial?",
+        answer: `Headline Consulting is a strategy-driven firm dedicated to helping organizations achieve measurable success. We partner with startups, SMEs, and established companies to solve complex problems, optimize performance, and design practical solutions that drive sustainable growth.\n\nAt Headline Consulting, we help businesses unlock growth, streamline operations, and make confident decisions in a changing world.`,
+    },
+    {
+        question: "Do you offer refunds?",
+        answer: `Headline Consulting is a strategy-driven firm dedicated to helping organizations achieve measurable success. We partner with startups, SMEs, and established companies to solve complex problems, optimize performance, and design practical solutions that drive sustainable growth.\n\nAt Headline Consulting, we help businesses unlock growth, streamline operations, and make confident decisions in a changing world.`,
+    },
+];

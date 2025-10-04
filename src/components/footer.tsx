@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container flex flex-col gap-10 text-ice-white">
                 <div className="flex flex-col gap-16">
                     <Link to="/" className="w-fit">
-                        <img src={LogoBg} alt="" />
+                        <img src={LogoBg} alt="Headline Consulting logo" />
                     </Link>
 
                     <div className="flex items-center justify-between">
@@ -28,7 +28,7 @@ const Footer = () => {
                                     <Link to={href} title={name}>
                                         <img
                                             src={icon}
-                                            alt=""
+                                            alt={`${name} icon`}
                                             className="size-4"
                                         />
                                     </Link>

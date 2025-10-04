@@ -1,6 +1,6 @@
+import Logo from "@/assets/images/pngs/logo.png";
 import { navLinks } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
-import Logo from "@/assets/images/pngs/logo.png";
 import { Link } from "react-router";
 
 type INavbar = React.ComponentProps<"nav">;
@@ -14,7 +14,7 @@ const Navbar = ({ className }: INavbar) => {
             )}
         >
             <Link to="/">
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="Headline Consulting logo" />
             </Link>
 
             <ul className="flex items-center gap-10">

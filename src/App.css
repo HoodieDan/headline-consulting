@@ -38,6 +38,7 @@
   --color-ice-white: var(--ice-white);
   --color-frost-white: var(--frost-white);
   --color-steel-gray: var(--steel-gray);
+  --color-soft-snow: var(--soft-snow);
 
   --font-general-sans: 'General Sans', sans-serif;
   --font-inter: "Inter", sans-serif;
@@ -85,6 +86,7 @@
   --ice-white: #F8FDFF;
   --frost-white: #FAFDFF;
   --steel-gray: #5E5E5E;
+  --soft-snow: #FAFAFA;
 }
 
 .dark {

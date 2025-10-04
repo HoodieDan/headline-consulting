@@ -17,7 +17,7 @@ const CustomerReviewCorousel = ({ className }: ICustomerReviewCorousel) => {
             opts={{ loop: true, align: "start" }}
             plugins={[
                 Autoplay({
-                    delay: 2000,
+                    delay: 10000,
                 }),
             ]}
             className={cn(className)}
@@ -27,27 +27,33 @@ const CustomerReviewCorousel = ({ className }: ICustomerReviewCorousel) => {
                     ({ avatar, companyLogo, name, review, role }, index) => (
                         <CarouselItem
                             key={name + index}
-                            className="lg:basis-1/4 md:basis-1/2 pl-2 h-105 flex flex-col justify-between p-8 rounded-xxl bg-ice-white"
+                            className="lg:basis-1/4 md:basis-1/2 pl-2"
                         >
-                            <figure>
-                                <img
-                                    src={companyLogo}
-                                    alt=""
-                                    className="object-cover"
-                                />
-                            </figure>
-                            <p className="text-steel-gray leading-[150%] tracking-[-0.3px]">
-                                {review}
-                            </p>
-                            <div className="flex items-center gap-3">
-                                <img src={avatar} alt="" className="size-8" />
-                                <div>
-                                    <h6 className="text-primary font-general-sans font-medium leading-[150%] tracking-[-0.3px]">
-                                        {name}
-                                    </h6>
-                                    <span className="text-sm leading-[150%] tracking-[-0.3px]">
-                                        {role}
-                                    </span>
+                            <div className="h-105 flex flex-col justify-between p-8 rounded-xxl bg-ice-white">
+                                <figure>
+                                    <img
+                                        src={companyLogo}
+                                        alt={`${name} company logo`}
+                                        className="object-cover"
+                                    />
+                                </figure>
+                                <p className="text-steel-gray leading-[150%] tracking-[-0.3px]">
+                                    {review}
+                                </p>
+                                <div className="flex items-center gap-3">
+                                    <img
+                                        src={avatar}
+                                        alt={`${name} avatar`}
+                                        className="size-8"
+                                    />
+                                    <div>
+                                        <h6 className="text-primary font-general-sans font-medium leading-[150%] tracking-[-0.3px]">
+                                            {name}
+                                        </h6>
+                                        <span className="text-sm leading-[150%] tracking-[-0.3px]">
+                                            {role}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </CarouselItem>

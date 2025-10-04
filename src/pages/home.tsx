@@ -2,13 +2,32 @@ import FastServicesImg from "@/assets/images/jpegs/fast-sevices.jpg";
 import SupportImg from "@/assets/images/jpegs/support.jpg";
 import TrustedExpertiseImg from "@/assets/images/jpegs/trusted-expertise.jpg";
 import CustomerReviewCorousel from "@/components/customer-review-corousel";
+import FAQs from "@/components/faqs";
 import Navbar from "@/components/navbar";
 import { buttonVariants } from "@/components/ui/button";
 import { ourClients, ourServices } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router";
 
+import { useEffect } from "react";
+
 export default function Home() {
+    useEffect(() => {
+        document.title =
+            "Headline Consulting — Strategic Business & Management Consulting";
+        const meta = document.querySelector('meta[name="description"]');
+        const description =
+            "Headline Consulting helps organizations with market analysis, operational excellence, and strategic planning to drive sustainable growth and long-term value.";
+        if (meta) {
+            meta.setAttribute("content", description);
+        } else {
+            const m = document.createElement("meta");
+            m.name = "description";
+            m.content = description;
+            document.head.appendChild(m);
+        }
+    }, []);
+
     return (
         <main>
             {/* ---------------------  Hero  --------------------- */}
@@ -74,7 +93,7 @@ export default function Home() {
                             <figure className="md:h-105">
                                 <img
                                     src={TrustedExpertiseImg}
-                                    alt=""
+                                    alt="Trusted expertise team in discussion"
                                     className="size-full object-cover rounded-xxl"
                                 />
                             </figure>
@@ -84,7 +103,7 @@ export default function Home() {
                             <figure className="size-full">
                                 <img
                                     src={FastServicesImg}
-                                    alt=""
+                                    alt="Fast and secure consulting services"
                                     className="size-full object-cover rounded-xxl"
                                 />
                             </figure>
@@ -108,7 +127,7 @@ export default function Home() {
                         <figure className="md:h-110">
                             <img
                                 src={SupportImg}
-                                alt=""
+                                alt="24/7 support team providing assistance"
                                 className="size-full object-cover rounded-xxl"
                             />
                         </figure>
@@ -144,7 +163,11 @@ export default function Home() {
 
                 <div className="flex items-center gap-16">
                     {ourClients.map(({ name, img }, index) => (
-                        <img key={name + index} src={img} alt="" />
+                        <img
+                            key={name + index}
+                            src={img}
+                            alt={`${name} logo`}
+                        />
                     ))}
                 </div>
             </section>
@@ -167,7 +190,11 @@ export default function Home() {
                                 key={heading + index}
                                 className="flex flex-col gap-4 p-8 rounded-xxl bg-ice-white"
                             >
-                                <img src={icon} alt="" className="size-8" />
+                                <img
+                                    src={icon}
+                                    alt={`${heading} icon`}
+                                    className="size-8"
+                                />
                                 <h4 className="text-2xl font-medium text-primary leading-[140%] whitespace-pre-line">
                                     {heading}
                                 </h4>
@@ -218,6 +245,41 @@ export default function Home() {
                 </div>
 
                 <CustomerReviewCorousel className="mt-15" />
+            </section>
+
+            {/* ---------------------  Your Questions. Answered.  --------------------- */}
+            <section className="container pt-25 pb-30 flex flex-col items-center gap-20">
+                <div className="w-3/5 flex flex-col gap-10">
+                    <div className="space-y-1 text-center">
+                        <h2 className="text-heading text-[2.5rem]">
+                            Your Questions. Answered.
+                        </h2>
+                        <p className="text-sm">
+                            Answers to all your questions, quickly and clearly
+                        </p>
+                    </div>
+
+                    <FAQs />
+                </div>
+
+                <div className="flex flex-col gap-6">
+                    <div className="space-y-1 text-center">
+                        <h2 className="text-heading text-[2rem]">
+                            Still have a question?
+                        </h2>
+                        <p className="text-sm">
+                            Contact us if you have any other questions.
+                        </p>
+                    </div>
+
+                    <Link
+                        to="/contact-us"
+                        title="Contact us"
+                        className={cn(buttonVariants(), "w-fit mx-auto")}
+                    >
+                        Contact us
+                    </Link>
+                </div>
             </section>
         </main>
     );
