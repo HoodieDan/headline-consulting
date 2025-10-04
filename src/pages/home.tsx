@@ -29,22 +29,22 @@ export default function Home() {
     }, []);
 
     return (
-        <main>
+        <>
             {/* ---------------------  Hero  --------------------- */}
-            <header className="h-dvh md:pt-10 pt-5 bg-[linear-gradient(0deg,#02304780,#02304780),url(@/assets/images/jpegs/hero-bg.jpg)] bg-no-repeat bg-cover bg-center flex flex-col">
-                <Navbar />
+            <header className="min-h-dvh h-dvh md:py-10 py-5 bg-[linear-gradient(0deg,#02304780,#02304780),url(@/assets/images/jpegs/hero-bg.jpg)] bg-no-repeat bg-cover bg-center flex flex-col">
+                <Navbar className="[--nav-bg:var(--color-white)]" />
 
-                <div className="h-full flex flex-col justify-center gap-8 md:px-0 px-4">
+                <div className="h-full flex flex-col justify-center gap-8 md:pt-0 pt-nav md:px-0 px-4">
                     <div className="space-y-4 text-white text-center">
                         <h1 className="text-heading text-white text-[3.5rem]">
                             Helping You Navigate Today,
-                            <br className="md:inline hidden" /> While Building
+                            <br className="md-br" /> While Building
                             Tomorrow.
                         </h1>
                         <p>
                             From market analysis to operational excellence, we
                             partner with you to develop
-                            <br className="md:inline hidden" /> bespoke
+                            <br className="md-br" /> bespoke
                             solutions that deliver sustainable impact and
                             accelerate your success.
                         </p>
@@ -71,7 +71,7 @@ export default function Home() {
                     <p>
                         We are here to provide easily, accessible, reliable and
                         innovative solutions,
-                        <br className="md:inline hidden" /> supported by
+                        <br className="md-br" /> supported by
                         technology and a team of experienced experts.
                     </p>
                 </div>
@@ -156,9 +156,9 @@ export default function Home() {
                     </h3>
                     <p className="text-sm text-ice-white">
                         We partner with forward-thinking businesses
-                        <br className="md:inline hidden" /> across industries,
+                        <br className="md-br" /> across industries,
                         helping them achieve
-                        <br className="md:inline hidden" /> remarkable results
+                        <br className="md-br" /> remarkable results
                     </p>
                 </div>
 
@@ -282,6 +282,6 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
-        </main>
+        </>
     );
 }

@@ -1,11 +1,12 @@
 import LogoBg from "@/assets/images/pngs/logo-bg.png";
 import { navLinks, socialLinks } from "@/lib/data/home";
+import { cn } from "@/lib/utils";
 import { Dot } from "lucide-react";
 import { Link } from "react-router";
 
-const Footer = () => {
+const Footer = ({ className }: React.ComponentProps<"footer">) => {
     return (
-        <footer className="pt-12 pb-5 bg-primary">
+        <footer className={cn("pt-12 pb-5 bg-primary", className)}>
             <div className="container flex flex-col gap-10 text-ice-white">
                 <div className="flex flex-col gap-16">
                     <Link to="/" className="w-fit">

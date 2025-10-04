@@ -48,6 +48,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-xxl: 1.25rem;
+
+  --spacing-nav: calc(var(--spacing) * 22.5)
 }
 
 :root {
@@ -149,6 +151,14 @@
   /* scrollbar-width: none; */
 }
 
+@utility md-br {
+  @apply md:inline hidden;
+}
+
+@utility pt-section {
+  @apply pt-[calc(var(--spacing-nav)+var(--spacing)*25)];
+}
+
 @utility text-heading {
-  @apply font-general-sans font-medium text-primary leading-15 tracking-[-0.6%];
+  @apply font-general-sans font-medium text-primary md:leading-15 leading-tight tracking-[-0.6%];
 }
