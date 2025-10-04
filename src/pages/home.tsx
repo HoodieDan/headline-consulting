@@ -15,7 +15,7 @@ export default function Home() {
                 <Navbar />
 
                 <div className="h-full flex flex-col justify-center gap-8">
-                    <div className="space-y-5 text-white text-center">
+                    <div className="space-y-4 text-white text-center">
                         <h1 className="text-heading text-white text-[3.5rem]">
                             Helping You Navigate Today,
                             <br /> While Building Tomorrow.
@@ -33,7 +33,7 @@ export default function Home() {
                         title="Contact us"
                         className={cn(
                             buttonVariants({ variant: "secondary" }),
-                            "w-fit mx-auto text-base",
+                            "w-fit mx-auto",
                         )}
                     >
                         Contact us
@@ -43,7 +43,7 @@ export default function Home() {
 
             {/* ---------------------  Why Choose Headline Consulting?  --------------------- */}
             <section className="bg-[url(@/assets/images/pngs/diamond-vector.png),url(@/assets/images/pngs/diamond-vector.png)] bg-no-repeat bg-position-[top,bottom] py-25">
-                <div className="space-y-5 text-center">
+                <div className="space-y-4 text-center">
                     <h2 className="text-heading text-[3.125rem]">
                         Why Choose Headline Consulting?
                     </h2>
@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="container flex flex-col gap-2 mt-20">
                     <div className="flex flex-col md:flex-row gap-2">
                         <div className="md:flex-2 p-8 rounded-xxl bg-ice-white flex flex-col gap-8">
-                            <div className="space-y-6">
+                            <div className="space-y-3">
                                 <h4 className="text-2xl text-primary font-medium font-general-sans">
                                     Trusted Expertise
                                 </h4>
@@ -88,7 +88,7 @@ export default function Home() {
                                 />
                             </figure>
 
-                            <div className="space-y-6">
+                            <div className="space-y-3">
                                 <h4 className="text-2xl text-primary font-medium font-general-sans">
                                     Fast and Safe Services
                                 </h4>
@@ -112,7 +112,7 @@ export default function Home() {
                             />
                         </figure>
 
-                        <div className="space-y-6">
+                        <div className="space-y-3">
                             <h4 className="text-2xl text-primary font-medium font-general-sans">
                                 24/7 Support
                             </h4>
@@ -129,7 +129,7 @@ export default function Home() {
 
             {/* ---------------------  Meet Our Clients  --------------------- */}
             <section className="p-16 bg-primary flex items-center justify-between">
-                <div className="space-y-6">
+                <div className="space-y-3">
                     <h3 className="text-heading text-[2.5rem] text-frost-white">
                         Meet Our Clients
                     </h3>
@@ -150,7 +150,7 @@ export default function Home() {
 
             {/* ---------------------  Our Services  --------------------- */}
             <section className="container py-25">
-                <div className="space-y-5">
+                <div className="space-y-2">
                     <h2 className="text-heading text-[2.5rem]">Our Services</h2>
                     <p>
                         We deliver strategic consulting solutions designed to
@@ -159,15 +159,48 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="mt-10 grid grid-cols-3 gap-2">
+                <div className="mt-10 grid md:grid-cols-3 gap-3">
                     {ourServices.map(
                         ({ icon, description, heading }, index) => (
                             <div
                                 key={heading + index}
-                                className="flex flex-col"
-                            ></div>
+                                className="flex flex-col gap-4 p-8 rounded-xxl bg-ice-white"
+                            >
+                                <img src={icon} alt="" className="size-8" />
+                                <h4 className="text-2xl font-medium text-primary leading-[140%] whitespace-pre-line">
+                                    {heading}
+                                </h4>
+                                <p className="text-sm leading-[150%]">
+                                    {description}
+                                </p>
+                            </div>
                         ),
                     )}
+                </div>
+            </section>
+
+            {/* ---------------------  Subscribe to our newsletter  --------------------- */}
+            <section className="py-22.5">
+                <div className="container p-20 bg-ice-white md:bg-[url(@/assets/images/pngs/bars.png)] bg-no-repeat bg-position-[calc(100%-80px)_100%] flex flex-col gap-8 rounded-xxl">
+                    <div className="space-y-2">
+                        <h3 className="text-heading text-[2.5rem]">
+                            Subscribe to our newsletter
+                        </h3>
+                        <p>
+                            Get the latest updates and exclusive offers from
+                            Headline Consulting.
+                        </p>
+                    </div>
+
+                    <Link
+                        to=""
+                        className={cn(
+                            buttonVariants({ variant: "secondary" }),
+                            "w-fit",
+                        )}
+                    >
+                        Learn more
+                    </Link>
                 </div>
             </section>
         </main>
